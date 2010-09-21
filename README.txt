@@ -49,6 +49,10 @@ Installation
 
 1) Link the AnaglyphizerJ.Js (Javascript) or AnaglyphizerC.Cs (C#) to the camera.
 
+Known issues
+
+The red/green and red/blue shaders are not fully implemented. We are still trying to make them work properly, that's also why we released everything on GitHub, hoping for involvement and cooperation of more Unity3D developers.
+
 Inspector variables to change script parameters:
 
 Enable Keys -> Flag 
