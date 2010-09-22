@@ -1,9 +1,7 @@
 /*~ StereoJ.js
 .---------------------------------------------------------------------------.
-|  Software: Esimple Studios Unity3D Anaglyph-izer Pack                     |
-|   Version: 1.0                                                            |
-|   Compatibility: requires Unity3D Pro (using rendertexture), compatible   |
-|                  with both Unity 2.6.1 and Unity 3.0f1 (separate shaders) |
+|  Software: Esimple Studios Unity3D Anaglyph-izer - Javascript version     |
+|   Version: 1.1                                                            |
 |   Contact: info ( a t ) esimplestudios . com                              |
 |      Info: http://blog.esimplestudios.com                                 |
 |   Support: http://blog.esimplestudios.com                                 |
@@ -45,15 +43,7 @@ public		var 		upEyeDistance		: KeyCode    = KeyCode.P;
 public		var 		downFocalDistance	: KeyCode    = KeyCode.K;
 public		var 		upFocalDistance		: KeyCode    = KeyCode.L;
 
-// Code Added by esimple adding Various render mode
-enum RenderMode {
-	Red_Cyan 		= 0,
-	Red_Blue 		= 1,
-	Red_Green 		= 2,
-}
-
-public 		var renderMode : RenderMode = 0;
-// end of code added by esimple
+public 		var 		shader 				: Shader;
 
 class S3DV extends System.Object {
    static var eyeDistance = 0.02;
@@ -63,20 +53,9 @@ class S3DV extends System.Object {
 function Start () {
 	
 	// Code Added by esimple adding Various render mode
-	var shader : Shader;
-	
-	if ( renderMode == RenderMode.Red_Cyan ) {
-		shader = Shader.Find( "Colour Balanced Anaglyph RC" );
-	}
-	if ( renderMode == RenderMode.Red_Blue ) {
-		shader = Shader.Find( "Colour Balanced Anaglyph RB" );
-	}
-	if ( renderMode == RenderMode.Red_Green ) {
-		shader = Shader.Find( "Colour Balanced Anaglyph RG" );
-	}
 	
 	if ( !shader  ) {
-		Debug.LogError("No Shader Found Reinstal Anaglyph Pack!!!");
+		Debug.LogError("No Shader Found Please Drag The shader in the appropriate Field");
 		this.enabled = false;
 		return;
 	}

@@ -1,9 +1,6 @@
-// Upgrade NOTE: replaced 'glstate.matrix.mvp' with 'UNITY_MATRIX_MVP'
-// Upgrade NOTE: replaced 'glstate.matrix.texture[0]' with 'UNITY_MATRIX_TEXTURE0'
-// Upgrade NOTE: replaced 'samplerRECT' with 'sampler2D'
-// Upgrade NOTE: replaced 'texRECT' with 'tex2D'
 
-Shader "Colour Balanced Anaglyph RG" {
+
+Shader "Hidden/Colour Balanced Anaglyph RC" {
 Properties {
    _LeftTex ("Left (RGB)", RECT) = "white" {}
    _RightTex ("Right (RGB)", RECT) = "white" {}
@@ -21,8 +18,8 @@ SubShader {
       #include "UnityCG.cginc"
       
       #define RED_RATIO_ADJ  .6f
-      #define GREEN_RATIO_ADJ  .8f
-      #define BLUE_RATIO_ADJ  .4f
+      #define GREEN_RATIO_ADJ  .4f
+      #define BLUE_RATIO_ADJ  .8f
       
       uniform samplerRECT _LeftTex;
       uniform samplerRECT _RightTex;
@@ -53,7 +50,7 @@ SubShader {
          b=texGB.b;
          
          float lumR = texR.r * 0.299f;
-         float lumGB = texR.g * 0.299f;
+         float lumGB = texR.g * 0.587f + texR.b * 0.114f;
          
          // Balance red
          float ratio = lumGB / lumR;
@@ -64,7 +61,7 @@ SubShader {
          }
          
          lumR = texGB.r * 0.299f;
-         lumGB = texGB.g * 0.299f;
+         lumGB = texGB.g * 0.587f + texGB.b * 0.114f;
          
          //Balance green
          ratio = lumR / lumGB;

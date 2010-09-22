@@ -1,15 +1,15 @@
 /*~ README.txt
 .---------------------------------------------------------------------------.
 |  Software: Esimple Studios Unity3D Anaglyph-izer Pack                     |
-|   Version: 1.0                                                            |
+|   Version: 1.1                                                            |
 |   Compatibility: requires Unity3D Pro (using rendertexture), compatible   |
-|                  with both Unity 2.6.1 and Unity 3.0f1 (separate shaders) |
+|                  with both Unity 2.6.1 and Unity 3.0f2 (separate shaders) |
 |   Contact: info ( a t ) esimplestudios . com                              |
 |      Info: http://blog.esimplestudios.com                                 |
 |   Support: http://blog.esimplestudios.com                                 |
 | ------------------------------------------------------------------------- |
 |     Admin: Francesco Gallorini (project administrator)                    |
-|	  Developers: Francesco Tozzi, Francesco Marcantoni                     |
+|	  Developers: Francesco Tozzi, Francesco Marcantoni                 |
 |     Packaging: Gabriele Maidecchi                                         |
 | Copyright (c) 2010, Esimple Studios All Rights Reserved.                  |
 | ------------------------------------------------------------------------- |
@@ -43,15 +43,25 @@ Then, we cooked all our modifications:
 And we finally released it under GPL for everyone to enjoy.
 If you are even remotely like us, you'll spend hours firing at stuff in the bootcamp demo like idiots.
 
-We included shaders for both 2.6.1 and 3.0f1 versions and two packages for each version, if you want it the easy way.
+We included shaders for 2.6.1 because the shaders included in the package are compatible only with 3.x
 
-Installation
+WHAT'S NEW
+
+1.1
+
+- fixed a compilation bug that prevented shaders from the package to be exported correctly (all versions)
+
+INSTALLATION
 
 1) Link the AnaglyphizerJ.Js (Javascript) or AnaglyphizerC.Cs (C#) to the camera.
 
-Known issues
+2) Link the shader to the script
 
-The red/green and red/blue shaders are not fully implemented. We are still trying to make them work properly, that's also why we released everything on GitHub, hoping for involvement and cooperation of more Unity3D developers.
+3) ONLY FOR 2.6.1: replace the shaders in the package with the ones included in the source/Shaders/2.6.1 folder
+
+KNOWN ISSUES
+
+The red/green and red/blue shaders are not fully implemented. However they improved a lot from 1.0 release.
 
 Inspector variables to change script parameters:
 
