@@ -50,6 +50,8 @@ WHAT'S NEW
 1.1
 
 - fixed a compilation bug that prevented shaders from the package to be exported correctly (all versions)
+- removed renderMode variable. Just drag the correct shader from the package.
+- removed red/blue shader and added an improved balanced red/cyan shader
 
 INSTALLATION
 
@@ -61,7 +63,7 @@ INSTALLATION
 
 KNOWN ISSUES
 
-The red/green and red/blue shaders are not fully implemented. However they improved a lot from 1.0 release.
+The red/green and red/cyan shaders are not fully implemented. However they improved a lot from 1.0 release with the release of the balanced version. We still could use a hand balancing them to improve the package even further.
 
 Inspector variables to change script parameters:
 
@@ -79,6 +81,3 @@ Lowers the focal distance
 
 Up Focal Distance -> Key
 Raises the focal distance
-
-renderMode -> Enum
-Sets the anaglyph mode: Red_Cyan, Red_Blue, Red_Green
