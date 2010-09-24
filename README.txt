@@ -1,15 +1,15 @@
 /*~ README.txt
 .---------------------------------------------------------------------------.
 |  Software: Esimple Studios Unity3D Anaglyph-izer Pack                     |
-|   Version: 1.1                                                            |
+|   Version: 1.2                                                            |
 |   Compatibility: requires Unity3D Pro (using rendertexture), compatible   |
 |                  with both Unity 2.6.1 and Unity 3.0f2 (separate shaders) |
 |   Contact: info ( a t ) esimplestudios . com                              |
-|      Info: http://blog.esimplestudios.com                                 |
-|   Support: http://blog.esimplestudios.com                                 |
+|      Info: http://bit.ly/u3dack                                           |
+|   Support: http://bit.ly/u3dack                                           |
 | ------------------------------------------------------------------------- |
 |     Admin: Francesco Gallorini (project administrator)                    |
-|	  Developers: Francesco Tozzi, Francesco Marcantoni                 |
+|	  Developers: Francesco Tozzi, Francesco Marcantoni                     |
 |     Packaging: Gabriele Maidecchi                                         |
 | Copyright (c) 2010, Esimple Studios All Rights Reserved.                  |
 | ------------------------------------------------------------------------- |
@@ -33,51 +33,28 @@ Everything started from this forum post: http://forum.unity3d.com/viewtopic.php?
 We took the script posted by aNTeNNa trEE of the Unity Demo Team.
 We added the modification posted by Monark implementing the projection matrix method, to simplify vision for the eyes.
 Monark also posted a modified shader from the original one, which we included by default.
-Then, we cooked all our modifications:
 
-- created 3 external shaders for the three anaglyph modes (Red/Cyan, Red/Blue, Red/Green)
-- automatic linking of the shader to the camera
-- added automatic support for GUITexture and GUIText
-- converted the original JS script into C#
+Then, we cooked all our modifications, and we finally released it under GPL for everyone to enjoy.
 
-And we finally released it under GPL for everyone to enjoy.
 If you are even remotely like us, you'll spend hours firing at stuff in the bootcamp demo like idiots.
 
-We included shaders for 2.6.1 because the shaders included in the package are compatible only with 3.x
+WHATÕS NEW (1.2)
 
-WHAT'S NEW
-
-1.1
-
-- fixed a compilation bug that prevented shaders from the package to be exported correctly (all versions)
-- removed renderMode variable. Just drag the correct shader from the package.
-- removed red/blue shader and added an improved balanced red/cyan shader
+- thereÕs no need anymore to link the various shaders
+- included a single parametric shader
+- itÕs now possible to create an infinite number of materials adjustable with parameters (see below) included configurations for Magenta/Green and Red/Blue modes
+- added a ÒUse Projection MatrixÓ flag to optimize the focal distance based on the cameraÕs Field of View
+- changed the folder structure to be more ÒUnity-friendlyÓ
+- added a fancy Demo (ONLY 3.x) that we promise will make you jump from your chair. ItÕs already packed in the ÒWith_DemoÓ package and available as a project in the Assets/Demo folder
 
 INSTALLATION
 
-1) Link the AnaglyphizerJ.Js (Javascript) or AnaglyphizerC.Cs (C#) to the camera.
+ONLY FOR 2.6.1: replace the shader in the package with the correct version in the source/Shaders/2.6.1 folder
 
-2) Link the shader to the script
-
-3) ONLY FOR 2.6.1: replace the shaders in the package with the ones included in the source/Shaders/2.6.1 folder
-
-KNOWN ISSUES
-
-The red/green and red/cyan shaders are not fully implemented. However they improved a lot from 1.0 release with the release of the balanced version. We still could use a hand balancing them to improve the package even further.
+1) Link the AnaglyphizerJ.Js (Javascript) or AnaglyphizerC.Cs (C#) to the camera. Or Select Camera and Open Component -> Anaglyphizer -> Anaglyphizer(Cs or Js)
+2) Link your material or one of those included in the prefab folder to the script
 
 Inspector variables to change script parameters:
 
-Enable Keys -> Flag 
-Allows you to use keys to change values
-
-Down Eye Distance -> Key
-Lowers the eyes distance
-
-Up Eye Distance -> Key
-Raises the eyes distance
-
-Down Focal Distance -> Key
-Lowers the focal distance
-
-Up Focal Distance -> Key
-Raises the focal distance
+Use Projection Matrix -> Flag
+Improve correct lens calculation based on Field Of View parameter
