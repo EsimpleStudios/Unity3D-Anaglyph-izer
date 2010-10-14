@@ -3,15 +3,17 @@
 |  Software: Esimple Studios Unity3D Anaglyph-izer Pack                     |
 |   Version: 1.2                                                            |
 |   Compatibility: requires Unity3D Pro (using rendertexture), compatible   |
-|                  with both Unity 2.6.1 and Unity 3.0f2 (separate shaders) |
+|                  with both Unity 2.6.1 and Unity 3.0 (separate shaders)   |
 |   Contact: info ( a t ) esimplestudios . com                              |
 |      Info: http://bit.ly/u3dack                                           |
 |   Support: http://bit.ly/u3dack                                           |
 | ------------------------------------------------------------------------- |
 |     Admin: Francesco Gallorini (project administrator)                    |
-|	  Developers: Francesco Tozzi, Francesco Marcantoni                     |
+|	  Developers: Francesco Tozzi, Francesco Marcantoni                 |
 |     Packaging: Gabriele Maidecchi                                         |
 | Copyright (c) 2010, Esimple Studios All Rights Reserved.                  |
+| Based on the original concept by: aNTeNNa trEE (Unity Demo Team)          |
+|                                   Monark                                  |
 | ------------------------------------------------------------------------- |
 |   License: Distributed under the GNU GENERAL PUBLIC LICENSE (GPL)         |
 |            http://www.gnu.org/licenses/gpl.html                           |
